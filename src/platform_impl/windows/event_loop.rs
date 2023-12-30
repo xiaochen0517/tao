@@ -929,7 +929,7 @@ fn is_show_window_contents_while_dragging_enabled() -> bool {
       SYSTEM_PARAMETERS_INFO_UPDATE_FLAGS(0),
     )
   };
-  result.is_ok() && is_enabled.0 != 0
+  result.0 != 0 && is_enabled.0 != 0
 }
 
 unsafe fn public_window_callback_inner<T: 'static>(
